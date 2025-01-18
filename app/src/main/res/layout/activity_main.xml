@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#03295D"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#164C9D">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toappbar"
+            style="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:menu="@menu/menu_appbar">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_60sdp">
+
+                <ImageView
+
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/tik1" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#164C9D"
+                android:gravity="center"
+                app:endIconTint="@color/white">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoComlateText"
+                    android:layout_width="201dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:background="#164C9D"
+                    android:inputType="none"
+                    android:text="All List "
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_15ssp"
+                    app:endIconTint="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_55sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+        android:id="@+id/addTodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:backgroundTint="#ffffff"
+        app:fabSize="normal"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/ic_add_icon" />
+
+</FrameLayout>
